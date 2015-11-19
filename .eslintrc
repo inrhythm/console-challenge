@@ -1,0 +1,36 @@
+{
+    "browser": true,
+    "globals": {
+        "describe": true,
+        "beforeEach": true,
+        "afterEach": true,
+        "spyOn": true,
+        "it": true,
+        "xit": true,
+        "expect": true,
+        "require": true,
+        "module": true,
+        "document": true,
+        "process": true
+    },
+    "rules": {
+        "comma-style": [2, "last"],
+        "space-before-blocks": [1, "always"],
+        "space-after-keywords": [1, "always"],
+        "space-infix-ops": [1],
+        "quotes": [1, "single"],
+        "global-strict": [0],
+        "strict": [0],
+        "dot-notation": 1,
+        "no-console": 2,
+        "no-debugger": 2,
+        "no-shadow": 1,
+        "semi": [2, "always"],
+        "no-trailing-spaces": [1],
+        "no-underscore-dangle": 0,
+        "no-use-before-define": [2, "nofunc"],
+        "curly": [2, "multi-line"],
+        "indent": [2, 4, {"VariableDeclarator": 1}],
+        "space-before-function-paren": [1, {"anonymous": "always", "named": "never"}]
+    }
+}
