@@ -1,10 +1,19 @@
 (() => {
   'use strict';
 
-  const f = () => {
-    return 'hello world';
-  };
+  const ascii = [
+    ' _____     ______ _           _   _               ',
+    '|_   _|    | ___ \ |         | | | |              ',
+    '  | | _ __ | |_/ / |__  _   _| |_| |__  _ __ ___  ',
+    '  | || \'_ \|    /| \'_ \| | | | __| \'_ \| \'_ ` _ \ ',
+    ' _| || | | | |\ \| | | | |_| | |_| | | | | | | | |',
+    ' \___/_| |_\_| \_|_| |_|\__, |\__|_| |_|_| |_| |_|',
+    '                         __/ |                    ',
+    '                        |___/                     '
+  ].join('\n');
 
-  console.log(f());
+  window.addEventListener('devtoolschange', function (e) {
+    if (e.detail.open) console.log(ascii);
+  });
 })();
 

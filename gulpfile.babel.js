@@ -2,6 +2,7 @@
 
 import gulp from 'gulp';
 import babel from 'gulp-babel';
+import concat from 'gulp-concat';
 import del from 'del';
 import rename from 'gulp-rename';
 import taskListing from 'gulp-task-listing';
@@ -15,8 +16,12 @@ gulp.task('clean', (done) => {
 });
 
 gulp.task('dist', ['clean'], () => {
-  return gulp.src('src/*.js')
+  return gulp.src([
+    'node_modules/devtools-detect/index.js',
+    'src/console-challenge.js'
+  ])
     .pipe(babel())
+    .pipe(concat('console-challenge.js'))
     .pipe(gulp.dest('dist'))
     .pipe(uglify())
     .pipe(rename({
