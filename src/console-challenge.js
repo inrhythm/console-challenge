@@ -12,7 +12,7 @@
     '                        |___/                     '
   ].join('\n');
 
-  window.addEventListener('devtoolschange', function (e) {
+  window.addEventListener('devtoolschange', (e) => {
     if (e.detail.open) console.log(ascii);
   });
 })();
